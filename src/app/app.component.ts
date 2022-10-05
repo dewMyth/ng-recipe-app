@@ -9,8 +9,4 @@ export class AppComponent {
   title = 'angular-recipes-app';
 
   activePage = 'recipe';
-
-  onNavigate(feature: string) {
-    this.activePage = feature;
-  }
 }
