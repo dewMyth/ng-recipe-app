@@ -16,19 +16,25 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RecipeStartComponent } from './recipes/recipestart/recipestart.component';
+import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
+    DropdownDirective,
+
+    // Recipe Components
     RecipesComponent,
+    RecipeStartComponent,
     RecipeListComponent,
     RecipeDetailComponent,
     RecipeItemComponent,
+    RecipeEditComponent,
+
+    // Shopping List Components ,
     ShoppingListComponent,
     ShoppingEditComponent,
-    DropdownDirective,
-    RecipeStartComponent,
   ],
   imports: [BrowserModule, FormsModule, HttpClientModule, AppRoutingModule],
   providers: [ShoppingListService, RecipeService],

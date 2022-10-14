@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
+import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 import { RecipesComponent } from './recipes/recipes.component';
 import { RecipeStartComponent } from './recipes/recipestart/recipestart.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
@@ -16,8 +17,12 @@ const appRoutes: Routes = [
     children: [
       // -> localhost:4200/recipes
       { path: '', component: RecipeStartComponent },
+      // -> localhost:4200/recipes/new
+      { path: 'new', component: RecipeEditComponent },
       // -> localhost:4200/recipes/1  (1 is the id of the recipe)
       { path: ':id', component: RecipeDetailComponent },
+      // -> localhost:4200/recipes/1/edit  (1 is the id of the recipe)
+      { path: ':id/edit', component: RecipeEditComponent },
     ],
   },
 
